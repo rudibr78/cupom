@@ -12,9 +12,6 @@ if (document.cookie.toString().indexOf('RDD=RDD') === -1) {
     CP.URL_API = 'http://127.0.0.1/m_apps/cupomw/';
     CP.URL_PUB = 'http://127.0.0.1/m_apps/public/';
 }
-    CP.URL_APP = 'http://127.0.0.1/m_apps/cupomw/';
-    CP.URL_API = 'http://127.0.0.1/m_apps/cupomw/';
-    CP.URL_PUB = 'http://127.0.0.1/m_apps/public/';
 
 MSG_SEM_NET = "Sua conexão com a internet parece estar desligada. Por favor verifique sua conexão e tente de novo.";
 
