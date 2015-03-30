@@ -13,7 +13,7 @@ if (document.cookie.toString().indexOf('RDD=RDD') === -1) {
     CP.URL_PUB = 'http://127.0.0.1/m_apps/public/';
 }
 
-MSG_SEM_NET = "Sua conexão com a internet parece estar desligada. Por favor verifique sua conexão e tente de novo.";
+MSG_SEM_NET = "Sua conexï¿½o com a internet parece estar desligada. Por favor verifique sua conexï¿½o e tente de novo.";
 
 function app_connected() {
     if (typeof navigator == 'undefined' || typeof Connection == 'undefined')
@@ -40,7 +40,7 @@ function load_ini_script() {
 
     $('body').css({display: 'none', visibility: 'hidden'});
 
-    $('html').css({backgroundColor: '#FFF'
+    $('html').css({backgroundColor: '#000'
         , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
