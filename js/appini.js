@@ -39,9 +39,9 @@ function load_ini_script() {
     $('#divsemnet').remove();
 
     $('body').css({display: 'none', visibility: 'hidden'});
-
+//alert('load_ini_script')
     $('html').css({
-        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v='+CP.jsv+'")'
+        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
