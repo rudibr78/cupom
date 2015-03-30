@@ -39,9 +39,9 @@ function load_ini_script() {
     $('#divsemnet').remove();
 
     $('body').css({display: 'none', visibility: 'hidden'});
-alert('load_ini_script')
+
     $('html').css({
-        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
+        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
@@ -57,7 +57,7 @@ alert('load_ini_script')
                 , backgroundAttachment: ''
                 , backgroundPosition: ''});
 
-            $('body').css({backgroundColor: '', display: '', visibility: 'visible'});
+            $('body').css({display: '', visibility: 'visible'});
 
             window.clearInterval(window.load_ini_script_interval);
         }
