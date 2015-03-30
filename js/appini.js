@@ -37,18 +37,13 @@ function app_connected() {
 
 function load_ini_script() {
     $('#divsemnet').remove();
-alert(1)
     $('body').css({display: 'none', visibility: 'hidden'});
-alert(2)
     $('html').css({
         backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
-alert(3)
     $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
-    alert(4)
-    alert( CP.URL_APP + 'js/app.js?v=' + CP.jsv )
 
     window.load_ini_script_interval = window.setInterval(function() {
         if ($('body').hasClass('ui-mobile-viewport')) {//verificao confiavel que o jqm terminou de renderizar
