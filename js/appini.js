@@ -35,6 +35,11 @@ function app_connected() {
     return true;
 }
 
+//verificao confiavel que o jqm terminou de renderizar
+function jqm_rendered() {
+    return $('#jqm_container').hasClass('ui-mobile-viewport');
+}
+
 function load_ini_script() {
     $('#divsemnet').remove();
 
@@ -49,7 +54,7 @@ function load_ini_script() {
     $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
 
     window.load_ini_script_interval = window.setInterval(function() {
-        if ($('body').hasClass('ui-mobile-viewport')) {//verificao confiavel que o jqm terminou de renderizar
+        if (jqm_rendered()) {
 
             $('html').css({backgroundColor: ''
                 , backgroundImage: ''
