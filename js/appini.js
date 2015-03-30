@@ -13,7 +13,7 @@ if (document.cookie.toString().indexOf('RDD=RDD') === -1) {
     CP.URL_PUB = 'http://127.0.0.1/m_apps/public/';
 }
 
-MSG_SEM_NET = "Sua conex�o com a internet parece estar desligada. Por favor verifique sua conex�o e tente de novo.";
+MSG_SEM_NET = "Sua conexão com a internet parece estar desligada. Por favor verifique sua conexão e tente de novo.";
 
 function app_connected() {
     if (typeof navigator == 'undefined' || typeof Connection == 'undefined')
