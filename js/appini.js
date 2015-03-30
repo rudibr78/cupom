@@ -40,8 +40,8 @@ function load_ini_script() {
 
     $('body').css({display: 'none', visibility: 'hidden'});
 
-    $('html').css({backgroundColor: '#000'
-        , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
+    $('html').css({
+        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
@@ -57,7 +57,7 @@ function load_ini_script() {
                 , backgroundAttachment: ''
                 , backgroundPosition: ''});
 
-            $('body').css({display: '', visibility: 'visible'});
+            $('body').css({backgroundColor: '', display: '', visibility: 'visible'});
 
             window.clearInterval(window.load_ini_script_interval);
         }
