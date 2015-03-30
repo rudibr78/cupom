@@ -41,7 +41,7 @@ function load_ini_script() {
     $('body').css({display: 'none', visibility: 'hidden'});
 
     $('html').css({
-        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png")'
+        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v='+CP.jsv+'")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
