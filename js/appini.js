@@ -37,12 +37,15 @@ function app_connected() {
 
 function load_ini_script() {
     $('#divsemnet').remove();
+
     $('body').css({display: 'none', visibility: 'hidden'});
-    $('html').css({
-        backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
+
+    $('html').css({backgroundColor: '#FFF'
+        , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
+
     $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
 
     window.load_ini_script_interval = window.setInterval(function() {
