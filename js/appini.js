@@ -1,8 +1,11 @@
 CP = {online: true};
 CP.APP_NAME = 'cupom';
+CP.VERSION = '1.1.1';
 CP.jsv = Math.ceil(Math.random() * 999999999999999) + 1;
 
 //cookie para debug
+//document.cookie="RDD=RDD; expires=Thu, 18 Dec 2053 12:00:00 UTC";
+
 if (document.cookie.toString().indexOf('RDD=RDD') === -1) {
     CP.URL_API = 'http://200.155.13.171:8080/m_apps/cupomw/';
     CP.URL_APP = 'http://200.155.13.171:8080/m_apps/cupomw/';
@@ -45,8 +48,7 @@ function load_ini_script() {
 
     $('body').css({display: 'none', visibility: 'hidden'});
 
-    $('html').css({backgroundColor: '#000'
-        , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
+    $('html').css({backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
@@ -56,8 +58,7 @@ function load_ini_script() {
     window.load_ini_script_interval = window.setInterval(function() {
         if (jqm_rendered()) {
 
-            $('html').css({backgroundColor: ''
-                , backgroundImage: ''
+            $('html').css({backgroundImage: ''
                 , backgroundRepeat: ''
                 , backgroundAttachment: ''
                 , backgroundPosition: ''});
@@ -83,7 +84,8 @@ $(function() {
                     wait_one_int = false;
                 } else {
                     $('#divsemnet').remove();
-                    $('body').append('<div id="divsemnet" style="font-family:Arial">' + MSG_SEM_NET + '</div>');
+                    $('body').css({display: '', visibility: 'visible'});
+                    $('body').append('<div id="divsemnet" style="font-family:Arial;color:#FFF;">' + MSG_SEM_NET + '</div>');
                 }
             }
         }, 1000);
