@@ -48,7 +48,8 @@ function load_ini_script() {
 
     $('body').css({display: 'none', visibility: 'hidden'});
 
-    $('html').css({backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
+    $('html').css({backgroundColor: '#000'
+        , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
         , backgroundRepeat: 'no-repeat'
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
@@ -58,7 +59,8 @@ function load_ini_script() {
     window.load_ini_script_interval = window.setInterval(function() {
         if (jqm_rendered()) {
 
-            $('html').css({backgroundImage: ''
+            $('html').css({backgroundColor: ''
+                , backgroundImage: ''
                 , backgroundRepeat: ''
                 , backgroundAttachment: ''
                 , backgroundPosition: ''});
@@ -84,8 +86,7 @@ $(function() {
                     wait_one_int = false;
                 } else {
                     $('#divsemnet').remove();
-                    $('body').css({display: '', visibility: 'visible'});
-                    $('body').append('<div id="divsemnet" style="font-family:Arial;color:#FFF;">' + MSG_SEM_NET + '</div>');
+                    $('body').append('<div id="divsemnet" style="font-family:Arial">' + MSG_SEM_NET + '</div>');
                 }
             }
         }, 1000);
