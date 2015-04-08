@@ -45,37 +45,7 @@ function jqm_rendered() {
 
 function load_ini_script() {
     $('#divsemnet').remove();
-
-    $('body').css({display: 'none', visibility: 'hidden'});
-
-    $('html').css({backgroundColor: '#000'
-        , backgroundImage: 'url("' + CP.URL_APP + 'imgs/splash_loading.png?v=' + CP.jsv + '")'
-        , backgroundRepeat: 'no-repeat'
-        , backgroundAttachment: 'fixed'
-        , backgroundPosition: 'center'});
-
-    var ini_appended = false;
-
-    window.load_ini_script_interval = window.setInterval(function() {
-        if (!ini_appended) {
-            $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
-            ini_appended = true;
-        }
-
-        if (jqm_rendered()) {
-            window.setTimeout(function() {
-                $('html').css({backgroundColor: ''
-                    , backgroundImage: ''
-                    , backgroundRepeat: ''
-                    , backgroundAttachment: ''
-                    , backgroundPosition: ''});
-
-                $('body').css({display: '', visibility: 'visible'});
-            }, 200);
-
-            window.clearInterval(window.load_ini_script_interval);
-        }
-    }, 100);
+    $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
 }
 
 $(function() {
