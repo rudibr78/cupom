@@ -54,18 +54,24 @@ function load_ini_script() {
         , backgroundAttachment: 'fixed'
         , backgroundPosition: 'center'});
 
-    $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
+    var ini_appended = false;
 
     window.load_ini_script_interval = window.setInterval(function() {
+        if (!ini_appended) {
+            $('head').append('<script' + ' type="text/javascript"' + ' src="' + CP.URL_APP + 'js/app.js?v=' + CP.jsv + '"' + '><' + '/' + 'script>');
+            ini_appended = true;
+        }
+
         if (jqm_rendered()) {
+            window.setTimeout(function() {
+                $('html').css({backgroundColor: ''
+                    , backgroundImage: ''
+                    , backgroundRepeat: ''
+                    , backgroundAttachment: ''
+                    , backgroundPosition: ''});
 
-            $('html').css({backgroundColor: ''
-                , backgroundImage: ''
-                , backgroundRepeat: ''
-                , backgroundAttachment: ''
-                , backgroundPosition: ''});
-
-            $('body').css({display: '', visibility: 'visible'});
+                $('body').css({display: '', visibility: 'visible'});
+            }, 200);
 
             window.clearInterval(window.load_ini_script_interval);
         }
