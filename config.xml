@@ -18,10 +18,10 @@
         Multidados TI
     </author>
     <access origin="*"/>
-    <preference name="phonegap-version" value="cli-6.0.0" />
+    <preference name="phonegap-version" value="cli-5.2.0" />
     <preference name="android-minSdkVersion" value="10" />
     
-    <gap:plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
+    <plugin name="cordova-plugin-whitelist" version="1.0.0" source="npm" />
     <allow-navigation href="http://*/*" />
     <allow-navigation href="https://*/*" />
     <allow-navigation href="ftp://*/*" />
@@ -41,10 +41,6 @@
 <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
     
     -->
-    <gap:plugin name="com.phonegap.plugins.facebookconnect" version="0.9.0">
-        <param name="APP_ID" value="990086001006707" />
-        <param name="APP_NAME" value="cp" />
-    </gap:plugin>
 
     <!-- <feature name="http://api.phonegap.com/1.0/battery"/> -->
     <feature name="http://api.phonegap.com/1.0/camera"/>
