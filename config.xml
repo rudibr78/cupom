@@ -36,6 +36,13 @@
     <plugin name="org.apache.cordova.file-transfer" spec="0.5.0" source="pgb" />    
     <plugin name="org.apache.cordova.splashscreen" spec="1.0.0" source="pgb" />
     <plugin name="net.roughshod.plugins.barcodescanner" spec="3.0.0" source="pgb" />
+    
+    <plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="stay-in-webview" value="true" />
     <!-- 
     <plugin name="com.phonegap.plugins.barcodescanner" spec="2.0.0" source="pgb" />
 <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
@@ -129,10 +136,6 @@
     <!-- page, column -->
     <preference value='unpaginated' name='PaginationMode'/>
 	
-    <gap:plugin name="com.phonegap.plugin.statusbar" />
-	
-    <preference name="StatusBarOverlaysWebView" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#EAEAEA" />
     <preference name="stay-in-webview" value="true" />
 
     <icon src="icon.png" />
